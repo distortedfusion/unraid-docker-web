@@ -1,0 +1,70 @@
+{
+    "adguardhome": {
+        "running": false,
+        "paused": false,
+        "autostart": false,
+        "cpuset": "",
+        "icon": "",
+        "registry": "https://hub.docker.com/r/adguard/adguardhome/",
+        "Support": "https://hub.docker.com/r/adguard/adguardhome/",
+        "Project": "",
+        "updated": "true",
+        "template": "/boot/config/plugins/dockerMan/templates-user/my-adguardhome.xml"
+    },
+    "unifi-video": {
+        "running": true,
+        "paused": false,
+        "autostart": true,
+        "cpuset": "",
+        "icon": "/state/plugins/dynamix.docker.manager/images/unifi-video-icon.png",
+        "url": "http://10.0.1.4:7080/manage",
+        "shell": "sh",
+        "registry": "https://registry.hub.docker.com/r/pducharme/unifi-video-controller/",
+        "Support": "http://lime-technology.com/forum/index.php?topic=37058",
+        "Project": "",
+        "updated": "true",
+        "template": "/boot/config/plugins/dockerMan/templates-user/my-unifi-video.xml"
+    },
+    "unifi-controller": {
+        "running": true,
+        "paused": false,
+        "autostart": true,
+        "cpuset": "",
+        "icon": "/state/plugins/dynamix.docker.manager/images/unifi-controller-icon.png",
+        "url": "https://10.0.1.2:8443",
+        "shell": "bash",
+        "registry": "https://hub.docker.com/r/linuxserver/unifi-controller/",
+        "Support": "https://forums.unraid.net/topic/78060-support-linuxserverio-unifi-controller/",
+        "Project": "https://www.ui.com/software/",
+        "updated": "true",
+        "template": "/boot/config/plugins/dockerMan/templates-user/my-unifi-controller.xml"
+    },
+    "nextcloud": {
+        "running": true,
+        "paused": false,
+        "autostart": true,
+        "cpuset": "",
+        "icon": "/state/plugins/dynamix.docker.manager/images/nextcloud-icon.png",
+        "url": "https://10.0.1.5:443/",
+        "shell": "sh",
+        "registry": "https://hub.docker.com/r/linuxserver/nextcloud",
+        "Support": "https://forums.unraid.net/topic/48383-support-linuxserverio-nextcloud/",
+        "Project": "https://nextcloud.com",
+        "updated": "true",
+        "template": "/boot/config/plugins/dockerMan/templates-user/my-nextcloud.xml"
+    },
+    "traefik": {
+        "running": true,
+        "paused": false,
+        "autostart": true,
+        "cpuset": "",
+        "icon": "",
+        "url": "http://10.0.1.3:8080",
+        "shell": "bash",
+        "registry": "https://hub.docker.com/_/traefik/",
+        "Support": "https://hub.docker.com/_/traefik/",
+        "Project": "",
+        "updated": "true",
+        "template": "/boot/config/plugins/dockerMan/templates-user/my-traefik.xml"
+    }
+}

@@ -1,0 +1,67 @@
+/* Generic input styling */
+.form-label {
+    @apply font-bold text-sm select-none;
+}
+
+.form-input,
+.form-textarea,
+.form-select,
+.form-multiselect {
+    @apply block w-full bg-white border-gray-300 shadow-sm rounded-md;
+
+    @apply text-sm;
+}
+
+@media (prefers-color-scheme: dark) {
+    .form-input,
+    .form-textarea,
+    .form-select,
+    .form-multiselect {
+        @apply bg-gray-900 border-gray-800 shadow-none;
+    }
+}
+
+/* Placeholder styling */
+.form-input::placeholder,
+.form-textarea::placeholder,
+.form-select::placeholder,
+.form-multiselect::placeholder {
+    @apply text-gray-500;
+}
+
+/* Checkbox and radio styling */
+.form-checkbox,
+.form-radio {
+    @apply text-blue-500 border-gray-300;
+}
+
+@media (prefers-color-scheme: dark) {
+    .form-checkbox,
+    .form-radio {
+        @apply border-gray-800;
+    }
+}
+
+/* Focus styling for all elements */
+.form-input,
+.form-textarea,
+.form-select,
+.form-multiselect,
+.form-checkbox,
+.form-radio {
+    @apply ring-0 ring-blue-500 ring-opacity-0;
+
+    transition: box-shadow .2s ease-in-out;
+
+    &:focus {
+        @apply border-blue-500 ring ring-blue-500 ring-opacity-50;
+    }
+
+    &:disabled, &[readonly] {
+        @apply bg-gray-100 border-gray-300;
+
+        &:focus {
+            @apply ring ring-gray-300 ring-opacity-50;
+        }
+    }
+}
