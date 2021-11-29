@@ -9,7 +9,7 @@
 !routes/
 !storage/
 !vendor/
-!.env
+!.env.dist
 !artisan
 !composer.json
 !composer.lock

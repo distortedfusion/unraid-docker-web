@@ -1,3 +1,8 @@
 #!/usr/bin/env bash
 
+if [ ! -f /var/www/html/.env ]; then
+    cp /var/www/html/.env.dist /var/www/html/.env
+    php /var/www/html/artisan key:generate --force
+fi
+
 /usr/bin/supervisord -c /etc/supervisor/conf.d/supervisord.conf
