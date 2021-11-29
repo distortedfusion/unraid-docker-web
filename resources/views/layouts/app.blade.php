@@ -9,6 +9,8 @@
 
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     <link rel="stylesheet" href="{{ mix('css/vendor.css') }}">
+
+    <x-favicons />
     <livewire:styles />
 </head>
 <body class="font-sans antialiased bg-gray-100 dark:bg-black text-black dark:text-white">
