@@ -19,3 +19,4 @@ yarn-error.log
 /public/js/*
 /public/webfonts/*
 /public/mix-manifest.json
+/public/mix.js.map
