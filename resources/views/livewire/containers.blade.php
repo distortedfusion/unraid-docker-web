@@ -2,10 +2,10 @@
     @wire
         <div class="flex items-center space-x-4">
             <div class="flex-grow">
-                <x-form-input name="search" :placeholder="__('Filter containers')" />
+                <x-form-input name="search" :placeholder="__('Filter Containers')" />
             </div>
             <div class="border-l border-gray-200 dark:border-gray-800 pl-4 flex-shrink-0">
-                <x-toggle name="showAll" :label="__('Show all')" />
+                <x-toggle name="showAll" :label="__('Show All')" />
             </div>
         </div>
     @endwire
@@ -23,16 +23,14 @@
             @foreach ($containers as $container)
                 <x-list-item :url="$container->url" class="flex items-center space-x-4{{ $loop->first ? ' rounded-t' : null }}{{ $loop->last ? ' rounded-b' : null }}">
                     <div class="flex-shrink-0">
-                        <x-icon icon="fa-compact-disc" />
+                        <x-icon icon="fa-cubes" :url="$container->icon" />
                     </div>
                     <div class="flex-grow">
                         {{ $container->name }}
 
-                        @if (! is_null($container->url))
-                            <div class="text-xs text-gray-500">
-                                {{ $container->url }}
-                            </div>
-                        @endif
+                        <div class="text-xs text-gray-500">
+                            {{ ! is_null($container->url) ? $container->url : __('Not running') }}
+                        </div>
                     </div>
 
                     @if (! is_null($container->url))

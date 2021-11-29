@@ -6,16 +6,19 @@ use Illuminate\View\Component;
 
 class Icon extends Component
 {
-    public ?string $icon;
+    public string $icon;
+    public ?string $url;
 
     /**
      * Create a new component instance.
      *
-     * @param string|null $icon
+     * @param string      $icon
+     * @param string|null $url
      */
-    public function __construct(string $icon = null)
+    public function __construct(string $icon, string $url = null)
     {
         $this->icon = $icon;
+        $this->url = $url;
     }
 
     /**
