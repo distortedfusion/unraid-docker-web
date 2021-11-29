@@ -16,7 +16,7 @@
         "paused": false,
         "autostart": true,
         "cpuset": "",
-        "icon": "/state/plugins/dynamix.docker.manager/images/unifi-video-icon.png",
+        "icon": "",
         "url": "http://10.0.1.4:7080/manage",
         "shell": "sh",
         "registry": "https://registry.hub.docker.com/r/pducharme/unifi-video-controller/",
