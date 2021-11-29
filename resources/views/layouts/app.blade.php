@@ -16,6 +16,14 @@
         {{ $slot }}
     </main>
 
+    <x-container-narrow>
+        <footer class="flex items-center justify-center py-8">
+            <a href="https://distortedfusion.com/?utm_source=unraid-docker-web&utm_medium=footer&utm_campaign=oss" class="block text-gray-500 hover:text-white transition-colors">
+                <x-logo width="147px" height="11px" />
+            </a>
+        </footer>
+    </x-container-narrow>
+
     <livewire:scripts />
 </body>
 </html>
