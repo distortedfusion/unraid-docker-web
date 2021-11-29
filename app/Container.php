@@ -2,6 +2,8 @@
 
 namespace App;
 
+use App\Facades\Docker;
+use Illuminate\Support\Str;
 use Spatie\DataTransferObject\DataTransferObject;
 
 class Container extends DataTransferObject
@@ -19,4 +21,17 @@ class Container extends DataTransferObject
     public string $support;
     public string $project;
     public string $template;
+
+    public function getIconUrl(): ?string
+    {
+        if (empty($this->icon)) {
+            return null;
+        }
+
+        $filePath = 'images/'.Str::after($this->icon, 'images/');
+
+        return Docker::storage()->has($filePath)
+            ? Docker::storage()->url($filePath)
+            : null;
+    }
 }

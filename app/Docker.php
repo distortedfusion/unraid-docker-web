@@ -56,7 +56,7 @@ class Docker
      *
      * @return \Illuminate\Contracts\Filesystem\Filesystem
      */
-    protected function storage(): Filesystem
+    public function storage(): Filesystem
     {
         return Storage::disk('data');
     }

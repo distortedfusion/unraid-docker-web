@@ -23,7 +23,7 @@
             @foreach ($containers as $container)
                 <x-list-item :url="$container->url" class="flex items-center space-x-4{{ $loop->first ? ' rounded-t' : null }}{{ $loop->last ? ' rounded-b' : null }}">
                     <div class="flex-shrink-0">
-                        <x-icon icon="fa-cubes" :url="$container->icon" />
+                        <x-icon icon="fa-cubes" :url="$container->getIconUrl()" />
                     </div>
                     <div class="flex-grow">
                         {{ $container->name }}
