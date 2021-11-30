@@ -41,6 +41,9 @@ COPY --chown=unraid:unraid . /var/www/html
 
 RUN chmod +x /usr/local/bin/start-container
 
+RUN php /var/www/html/artisan route:cache
+RUN php /var/www/html/artisan view:cache
+
 EXPOSE 8000
 
 ENTRYPOINT ["start-container"]

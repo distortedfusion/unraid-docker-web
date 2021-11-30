@@ -2,7 +2,10 @@
 
 if [ ! -f /var/www/html/.env ]; then
     cp /var/www/html/.env.dist /var/www/html/.env
+
+    php /var/www/html/artisan config:clear
     php /var/www/html/artisan key:generate --force
+    php /var/www/html/artisan config:cache
 fi
 
 /usr/bin/supervisord -c /etc/supervisor/conf.d/supervisord.conf
