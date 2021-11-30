@@ -8,8 +8,6 @@
 .form-select,
 .form-multiselect {
     @apply block w-full bg-white border-gray-300 shadow-sm rounded-md;
-
-    @apply text-sm;
 }
 
 @media (prefers-color-scheme: dark) {

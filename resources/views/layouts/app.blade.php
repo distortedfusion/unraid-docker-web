@@ -13,7 +13,7 @@
     <x-favicons />
     <livewire:styles />
 </head>
-<body class="font-sans antialiased bg-gray-100 dark:bg-black text-black dark:text-white">
+<body class="text-base font-sans antialiased bg-gray-100 dark:bg-black text-black dark:text-white">
     <main class="py-8">
         {{ $slot }}
     </main>
