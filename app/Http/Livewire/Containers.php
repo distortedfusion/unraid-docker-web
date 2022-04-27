@@ -41,7 +41,8 @@ class Containers extends Component
                 }
 
                 return Str::containsInsensitive($container->name, $this->search);
-            });
+            })
+            ->sortBy('name');
     }
 
     /**
